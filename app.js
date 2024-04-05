@@ -1,9 +1,9 @@
 let user_hand = prompt('じゃんけんの手をグー、チョキ、パーから選んでください。');
-while((user_hand != "グー") && (user_hand != "チョキ") && (user_hand != "パー") && (user_hand != null)){
+while((user_hand != "グー") && (user_hand != "チョキ") && (user_hand != "パー") && (user_hand != null)){ //nullはpromptのキャンセルのこと。グー・チョキ・パー・キャンセル以外を入力されるまで繰り返す
   alert('グー・チョキ・パーのいずれかを入力してください');
   user_hand = prompt('じゃんけんの手をグー、チョキ、パーから選んでください');
 }
-let js_hand = getJShand();
+let js_hand = getJShand(); //user_handに対してコンピュータが選ぶ手
 let judge = winLose(user_hand, js_hand);
 
 if (user_hand != null){
